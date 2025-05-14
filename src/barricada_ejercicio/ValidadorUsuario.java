@@ -23,14 +23,14 @@ public class ValidadorUsuario {
             throw new InputMismatchException("Correo invalido");
         }
 
-        return "";
+        return entradaCorreo;
 
     }
 
     // implementar método: validarContrasena(String contrasena)
-    // constraseña debe tener longitud mayor o igual a 8
+    // constraseña debe tener longitud mayor o igual a 9
     public static String validarContrasena(String entradaContrasena) throws InputMismatchException {
-        if (!(entradaContrasena.length() >= 8)) {
+        if (!(entradaContrasena.length() >= 9)) {
             throw new InputMismatchException("La contraseña tiene que tener una longitud de 8 o más caracteres");
 
         }
@@ -41,7 +41,7 @@ public class ValidadorUsuario {
     // implementar método: validarEdad(String edadTexto)
     // edad debe ser mayor o gual a 15 y menor o igual a 50
     public static int validarEdad(int entradaEdad) throws InputMismatchException {
-        if (entradaEdad < 15 && entradaEdad > 50) {
+        if (entradaEdad < 15 || entradaEdad > 50) {
             throw new InputMismatchException("Edad inválida");
 
         }
